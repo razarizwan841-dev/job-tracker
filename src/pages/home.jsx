@@ -3,6 +3,7 @@ import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router";
 import { auth } from "../fireBase/fireBase";
 import { AuthContext } from "../context/AuthProvider";
+import JobForm from "../jobForm";
 function Home() {
   const navigate = useNavigate();
 
@@ -20,6 +21,7 @@ function Home() {
   return (
     <div>
       <button onClick={doLogOut}>Log Out</button>
+      <JobForm />
     </div>
   );
 }
