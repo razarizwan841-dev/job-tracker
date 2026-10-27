@@ -5,6 +5,7 @@ import { auth } from "../fireBase/fireBase";
 import { AuthContext } from "../context/AuthProvider";
 import JobForm from "../jobForm";
 import JobList from "../component/jobList";
+import "../pagesCss/home.css";
 function Home() {
   const navigate = useNavigate();
 
@@ -20,8 +21,10 @@ function Home() {
   }
 
   return (
-    <div>
-      <button onClick={doLogOut}>Log Out</button>
+    <div className="home">
+      <button className="home__logout" onClick={doLogOut}>
+        Log Out
+      </button>
       <JobForm />
       <JobList />
     </div>

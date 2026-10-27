@@ -1,0 +1,41 @@
+.navbar {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.navbar__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  list-style: none;
+}
+
+.navbar__email {
+  order: 1;
+  font-size: 15px;
+  color: var(--muted);
+}
+
+.navbar__logout-item {
+  order: 2;
+}
+
+.navbar__logout {
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.navbar__logout:hover {
+  background: #fee2e2;
+  border-color: var(--danger);
+  color: var(--danger);
+}

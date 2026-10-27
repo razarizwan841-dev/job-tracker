@@ -5,9 +5,11 @@ import React from "react";
 
 function Layout() {
   return (
-    <div>
+    <div className="layout">
       <Navbar />
-      <Outlet />
+      <main className="layout__content">
+        <Outlet />
+      </main>
     </div>
   );
 }

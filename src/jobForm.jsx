@@ -3,6 +3,7 @@ import React from "react";
 import { db } from "./fireBase/fireBase";
 import { addDoc, collection } from "firebase/firestore";
 import { AuthContext } from "./context/AuthProvider";
+import "./componentCss/jobForm.css";
 
 function JobForm() {
   const { user } = useContext(AuthContext);
@@ -39,12 +40,12 @@ function JobForm() {
         setNotes("");
       })
       .catch((err) => {
-        console(err.message);
+        console.log(err);
       });
   };
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="job-form" onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="company"
